@@ -1,0 +1,25 @@
+{% extends 'meetups/based/base.html' %}
+
+{% load static %}
+
+{% block title %}Email confirmed!{% endblock %}
+
+{% block site_css %}
+<link rel="stylesheet" href="{% static 'meetups/styles/email-confirmed.css' %}">
+{% endblock %}
+
+{% block main_heading %}
+Thanks for signing up for our meetup!
+{% endblock %}
+
+{% block body %}
+<section id="confirmation">
+    <h2>Great Success!</h2>
+    <p>Well see you at the meetup!</p>
+    <p>Any questions? Feel free to <a href="mailto:{{ organizer_email }}">contact meetup organizer</a></p>
+</section>
+<section id="continue">
+    <p>Are you interested in some of our other meetups?</p>
+    <p><a href="/meetups" class="btn">Check them out here!</a></p>
+</section>
+{% endblock %}
